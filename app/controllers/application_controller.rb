@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  post '/questions' do
+  post '/question' do
     new_questions = Questions.new(:user_id => params[:user_id], :message => params[:message])
     new_questions.save
     redirect ('/')
