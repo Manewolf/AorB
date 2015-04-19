@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-  	@questions = Questions.all
+  	@questions = Question.all
     @users = User.all
     erb :index
   end
