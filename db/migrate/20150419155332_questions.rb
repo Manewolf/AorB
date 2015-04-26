@@ -5,6 +5,8 @@ class Questions < ActiveRecord::Migration
   		t.string :choice_a
   		t.string :choice_b
   		t.integer :user_id
+      t.integer :choice_a_amount
+      t.integer :choice_b_amount
   	end
   end
 

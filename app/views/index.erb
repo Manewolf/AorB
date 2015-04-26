@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Flatiron Sinatra Project Template</title>
+    <title>Questions for Quest. Ons</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
@@ -11,7 +11,13 @@
         <ul>
           <% @questions.each do |question|%>
           <li>
+            
             <%= question.question_text %>
+            <form action="/stuff" method="post">
+            <input >
+            A) <%= question.choice_a %>
+            B) <%= question.choice_b %>
+          </form>
           </li>
           <% end %>
         </ul>

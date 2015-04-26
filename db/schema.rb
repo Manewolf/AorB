@@ -11,6 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150419155332) do
+
+  create_table "questions", force: :cascade do |t|
+    t.string  "question_text"
+    t.string  "choice_a"
+    t.string  "choice_b"
+    t.integer "user_id"
+    t.integer "choice_a_amount"
+    t.integer "choice_b_amount"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password"
+  end
 
 end
