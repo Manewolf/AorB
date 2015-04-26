@@ -43,5 +43,10 @@ class ApplicationController < Sinatra::Base
     redirect ('/users')
   end
 
+  post '/submit' do
+    binding.pry
+    question.find
+  end
+
 end
 
