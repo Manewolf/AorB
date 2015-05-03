@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Questions for Quest. Ons</title>
+    <title>Results/title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <nav class="navbar navbar-default">
@@ -43,7 +43,6 @@
           <li>
             <%= question.question_text %>
             <form action="/submit/<%=question.id%>" method="post">
-              <input type="hidden" name="Question_id" value=<%= question.id %>>
               <input type="radio" name="choice" value="a"><%= question.choice_a %>
               <input type="radio" name="choice" value="b"><%= question.choice_b %>
               <input type="submit" >
