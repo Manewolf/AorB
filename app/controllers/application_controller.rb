@@ -43,9 +43,16 @@ class ApplicationController < Sinatra::Base
     redirect ('/users')
   end
 
-  post '/submit' do
+  post '/submit/:id' do
     binding.pry
-    question.find
+    @question = Question.find(params[:id]) 
+    if params[:choice] == "a"
+      @question.choice_a_amount += 1
+    else
+      @question.choice_b_amount += 1
+    end
+    @question.save
+    erb :result
   end
 
 end
