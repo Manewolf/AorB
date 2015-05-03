@@ -44,7 +44,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/submit/:id' do
-    binding.pry
     @question = Question.find(params[:id]) 
     if params[:choice] == "a"
       @question.choice_a_amount += 1
@@ -54,6 +53,11 @@ class ApplicationController < Sinatra::Base
     @question.save
     erb :result
   end
+    
+    get '/result/:id' do
+    @question = Question.find(params[:id])
+    erb :result
+    end
 
 end
 

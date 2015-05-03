@@ -36,22 +36,7 @@
 </nav>
   </head>
   <body>
-    <div class="container">
-      <div>
-        <ul>
-          <% @questions.each do |question|%>
-          <li>
-            <%= question.question_text %>
-            <form action="/submit/<%=question.id%>" method="post">
-              <input type="radio" name="choice" value="a"><%= question.choice_a %>
-              <input type="radio" name="choice" value="b"><%= question.choice_b %>
-              <input type="submit" >
-            </form>
-          </li>
-          <% end %>
-        </ul>
-      </div>
-
+    
 
 
     </div>
