@@ -44,7 +44,9 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/submit/:id' do
-    @question = Question.find(params[:id]) 
+    @question = Question.find(params[:id])
+    @question.choice_a_amount ||= 0
+    @question.choice_b_amount ||= 0
     if params[:choice] == "a"
       @question.choice_a_amount += 1
     else
